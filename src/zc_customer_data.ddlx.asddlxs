@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+
+@UI: {
+    headerInfo: {
+        typeName: 'Customer',
+        typeNamePlural: 'Customers',
+        title.value: 'Name'
+    }
+}
+
+annotate entity ZC_CUSTOMER_DATA with
+{
+
+  @UI.facet: [{ id : 'idCustomer', label : 'Customer Detail', type: #IDENTIFICATION_REFERENCE, position : 10 }]
+
+  @EndUserText.label: 'Customer ID'
+  @UI.identification: [{ position : 10 }]
+  CustomerUuid;
+  @EndUserText.label: 'Customer Name'
+  @UI.lineItem: [{ position : 10 }]
+  @UI.identification: [{ position : 20 }]
+  Name;
+  @EndUserText.label: 'Country'
+  @UI.lineItem: [{ position : 30 }]
+  @UI.identification: [{ position : 30 }]
+  @UI.selectionField: [{ position : 10  }]
+  @Consumption.valueHelpDefinition: [{ entity : { name: 'ZORD_C_COUNTRYVH', element:'Country' } }]
+  Country;
+  @EndUserText.label: 'Email Id'
+  @UI.lineItem: [{ position : 20 }]
+  @UI.identification: [{ position : 40 }]
+  Email;
+  @EndUserText.label: 'City'
+  @UI.identification: [{ position : 50 }]
+  City;
+  @EndUserText.label: 'Created By'
+  @UI.identification: [{ position : 60 }]
+  CreatedBy;
+  @EndUserText.label: 'Last Changed By'
+  @UI.identification: [{ position : 70 }]
+  LastChangedBy;
+  @EndUserText.label : 'Created At'
+  @UI.identification: [{ position : 80 }]
+  CreatedAt;
+  @EndUserText.label : 'Changed At'
+  @UI.identification: [{ position : 90 }]
+  ChangedAt;
+}

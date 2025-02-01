@@ -1,0 +1,5 @@
+CLASS zcl_customer_core DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_customer_data.
+ENDCLASS.
+
+CLASS zcl_customer_core IMPLEMENTATION.
+ENDCLASS.
